@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #div1 ol{
+            list-style: none;
+        }
+        #div1 li{
+            width: 200px;
+            height: 100px;
+            background: green;
+            position: relative;
+            border: 1px solid #cccccc;
+            margin: 10px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <ol>
+            <li>1111111111111111111</li>
+            <li>2222222222222222222</li>
+            <li>3333333333333333333</li>
+            <li>4444444444444444444</li>
+        </ol>
+    </div>
+<script>
+    var oLis=document.getElementById("div1").getElementsByTagName("li");
+    for(var i=0;i<oLis.length;i++){
+        (function(i){window.setTimeout(function(){oLis[i].style.left=100*(i+1)+"px";},1000*(i+1));
+    })(i)};
+</script>
+</body>
+</html>
